@@ -19,6 +19,8 @@ jobs:
           script: |
             cd pito-buns
             git pull origin main
+            export BUN_INSTALL="$HOME/.bun"
+            export PATH="$BUN_INSTALL/bin:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin"
             BUN_PATH=$(which bun)
             bun install
             bun run build
