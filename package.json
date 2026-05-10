@@ -11,7 +11,7 @@
     "dev": "bunx --bun vite",
     "build": "bunx --bun vite build",
     "preview": "bunx --bun vite preview",
-    "serve": "bunx serve -s dist -l 3000"
+    "serve": "bunx serve -s dist -l 3000 --host 127.0.0.1"
   },
   "dependencies": {
     "vue": "^3.5.32"
