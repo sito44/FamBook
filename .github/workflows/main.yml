@@ -19,6 +19,12 @@ jobs:
           script: |
             cd pito-buns
             git pull origin main
+            export BUN_INSTALL="$HOME/.bun"
+            export PATH="$BUN_INSTALL/bin:$PATH"
             bun install
-            # Restart your app (example using pm2)
-            pm2 restart fambook || pm2 start src/index.ts --name my-bun-app --interpreter ~/.bun/bin/bun
+            bun run build
+            
+            # We delete and start to ensure PM2 picks up the 'serve' command
+            pm2 delete fambook || true
+            pm2 start "bun run serve" --name fambook
+            pm2 save
