@@ -15,6 +15,7 @@ jobs:
           host: ${{ secrets.OCI_IP }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
           script: |
             cd pito-buns
             git pull origin main
