@@ -27,5 +27,5 @@ jobs:
             
             # We delete and start to ensure PM2 picks up the 'serve' command
             pm2 delete fambook || true
-            pm2 start "$BUN_PATH" --name "fambook" -- run serve
+            pm2 start server.js --name fambook --interpreter $(which bun)
             pm2 save
