@@ -8,9 +8,10 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-   "dev": "bunx --bun vite",
-  "build": "bunx --bun vite build",
-    "preview": "bunx --bun vite preview"
+    "dev": "bunx --bun vite",
+    "build": "bunx --bun vite build",
+    "preview": "bunx --bun vite preview",
+    "serve": "bunx serve -s dist -l 3000"
   },
   "dependencies": {
     "vue": "^3.5.32"
