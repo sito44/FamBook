@@ -26,5 +26,5 @@ jobs:
             
             # We delete and start to ensure PM2 picks up the 'serve' command
             pm2 delete fambook || true
-            pm2 start "bun run serve" --name fambook --interpreter $(which bun)
+            pm2 start "bun run serve" --name fambook --host 127.0.0.1 --interpreter $(which bun)
             pm2 save
