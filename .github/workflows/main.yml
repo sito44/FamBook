@@ -12,7 +12,7 @@ jobs:
       - name: Deploy to OCI A1 via SSH
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.REMOTE_HOST }}
+          host: ${{ secrets.OCI_IP }}
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
